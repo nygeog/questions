@@ -1,4 +1,4 @@
-#Shapely Intersect
+#Open Source Intersect - Shapely (and an OGR solution)
 ![image](img/shapely_intersect.png)
 
 What I'd like to try and do is intersect these buffers with these census tracts, maintain their ID's and the tracts attributes. 
