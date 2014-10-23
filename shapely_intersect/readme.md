@@ -3,7 +3,10 @@
 
 What I'd like to try and do is intersect these buffers with these census tracts, maintain their ID's and the tracts attributes. 
 
-#The following Code was able to do it. Thanks 
+####These buffers are random points. The [Census Tracts are from NYC Department of City Planning](http://www.nyc.gov/html/dcp/html/bytes/districts_download_metadata.shtml#cbt)
+
+
+##The following Code was able to do it. Thanks 
 [GIS.StackExchange conversation](http://gis.stackexchange.com/questions/119374/intersect-shapefiles-using-shapely)
 
 Thanks [ThomasG77](http://gis.stackexchange.com/users/638/thomasg77)
