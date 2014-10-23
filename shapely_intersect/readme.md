@@ -51,4 +51,6 @@ Thanks [ThomasG77](http://gis.stackexchange.com/users/638/thomasg77)
 ##Someoone also contributed some OGR code.
 Thanks [mike-t](http://gis.stackexchange.com/users/1872/mike-t)
 
+cd to the questions directory (not the data one)
+
 	ogr2ogr -sql "SELECT ST_Intersection(A.geometry, B.geometry) AS geometry, A.*, B.* FROM nyct2010 A, h1_buf B WHERE ST_Intersects(A.geometry, B.geometry)" -dialect SQLITE data data -nln h1_buf_int_ct2
