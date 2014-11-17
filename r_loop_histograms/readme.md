@@ -45,3 +45,28 @@ I would like to try to do it in R. I assume the hist plots have some default bre
 	# ggplot(df,aes(x = value)) + 
 	#   facet_wrap(~variable,scales = "free_x") + 
 	#   geom_histogram()
+	
+	
+	
+##Steve's R code: 
+The structure you want in R is technically a vector and not a list, for what it’s worth.  R’s type naming scheme is odd. 
+ 
+Anyway, I’d try:
+ 
+	for (name in colnames(df)) {
+	  the_data <- df[,name]
+	  // do the stuff here
+	  hist(the_data, breaks=25)
+	}
+ 
+Though that’s going to generate each histogram in order, each new one replacing the old one.  So you might want to output it into a PDF, like:
+ 
+	pdf(“path_to_my_file”)
+	for (name in colnames(df)) {
+	…
+	}
+	dev.off()
+ 
+Does that make sense?
+ 
+Steve
