@@ -1,4 +1,31 @@
 #Looping through columns to create histograms for each	
+
+##Latest R code
+This code doesn't seem to work I get an error:
+
+<strong>Error in dev.copy(png, filename = x) : cannot copy from the null device</strong> 
+
+Not sure what is going on here. Is the dev.off() turning off before the file has a chance to copy? 
+
+
+	library(ggplot2)
+
+	df <- read.csv('pollen_sites.csv')
+
+	for (name in colnames(df)){
+	  x = paste(c('histograms/',name,'.png'), collapse='')
+	  print(x)
+	  qplot(name, data=df, geom="histogram")
+	  dev.copy(png,filename=x);
+	  dev.off();
+	}
+
+
+
+
+
+
+
 	
 ##Python	
 	
