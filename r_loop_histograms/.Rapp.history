@@ -119,3 +119,15 @@ for (name in colnames(df)){#
 # # qplot(pr1000mbldgbulkland, data=df, geom="histogram", binwidth = 10)#
 # dev.copy(png,filename="histograms/plot3.png");#
 # dev.off ();
+library(ggplot2)#
+#
+df <- read.csv('pollen_sites.csv')#
+#
+for (name in colnames(df)){#
+  x = paste(c('histograms/',name,'.png'), collapse='')#
+  print(x)#
+  qplot(name, data=df, geom="histogram")#
+  dev.copy(png,filename=x);#
+  #graphics.off();#
+  #dev.off();#
+}

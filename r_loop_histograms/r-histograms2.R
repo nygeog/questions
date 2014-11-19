@@ -7,5 +7,6 @@ for (name in colnames(df)){
   print(x)
   qplot(name, data=df, geom="histogram")
   dev.copy(png,filename=x);
+  #graphics.off();
   dev.off();
 }
