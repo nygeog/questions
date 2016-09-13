@@ -12,6 +12,6 @@ sigma = 0.001
 df = pd.read_csv(inCSV)
 
 df['latitude'] = df[inLatField ] +  np.random.normal(mu, sigma, size=len(df))
-df['longitude']  = df[inLngField ] +  np.random.normal(mu, sigma, size=len(df))
+df['longitude']= df[inLngField ] +  np.random.normal(mu, sigma, size=len(df))
 
 df.to_csv(ouCSV,index=False)
